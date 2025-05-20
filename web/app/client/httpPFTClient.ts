@@ -5,7 +5,7 @@ import { toast } from 'sonner'
 export const PFT_BASE_URL =
   import.meta.env.VITE_DEV_MODE === 'true'
     ? import.meta.env.VITE_BASE_DOMAIN
-    : 'http://localhost:8000/'
+    : 'http://localhost:8000'
 
 // Add retry property to AxiosRequestConfig
 interface CustomInternalAxiosRequestConfig extends InternalAxiosRequestConfig {
