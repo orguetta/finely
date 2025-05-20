@@ -1,4 +1,4 @@
-# Frontend Template
+# Frontend
 
 ## Screenshot
 ![Screenshot 2025-04-17 at 12 05 51 PM](https://github.com/user-attachments/assets/67519e75-19b0-44f8-abe1-d5c57f8a710d)
