@@ -1,4 +1,4 @@
-# 🚀 Create DRF App
+# 🚀 Backend API
 
 A DRF designed with developer productivity and best practices in mind.
 
