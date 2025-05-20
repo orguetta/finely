@@ -2,7 +2,7 @@
 
 **Fintrack** is a privacy-first, self-hostable personal finance tracker built by [Sannty](https://sannty.in). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
 
-## Admin Credentials (change me!)
+## [Self Host] Admin Credentials (change me!)
 URL: http://localhost:5173
 ```
 email: admin@example.com
