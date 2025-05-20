@@ -47,13 +47,19 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         )
 
     def validate(self, data):
+        if not data.get("email"):
+            raise serializers.ValidationError({"email": "Email is required."})
+        
+        # Ensure username is set to email
+        if "username" not in data or not data["username"]:
+            data["username"] = data["email"]
+            
         if data["password"] != data.pop("confirm_password"):
-            raise serializers.ValidationError("Passwords do not match.")
+            raise serializers.ValidationError({"password": "Passwords do not match."})
         if len(data["password"]) < 8:
             raise serializers.ValidationError(
-                "Password must be at least 8 characters long."
+                {"password": "Password must be at least 8 characters long."}
             )
-        data["username"] = data["email"]  # Set username same as email
         return data
 
     def create(self, validated_data):

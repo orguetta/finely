@@ -126,6 +126,11 @@ class RegisterUserAPIView(generics.CreateAPIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
+        # Set username to email before passing to serializer
+        mutable_data = request.data.copy()
+        mutable_data['username'] = email
+        request._full_data = mutable_data
+
         return super().create(request, *args, **kwargs)
 
 
