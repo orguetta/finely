@@ -2,6 +2,12 @@
 
 **Fintrack** is a privacy-first, self-hostable personal finance tracker built by [Ashish Kapoor](https://github.com/ashishkapoor). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
 
+## Default credentials
+```
+email: admin@example.com
+password: fintrack
+```
+
 ---
 
 ## 🚀 Features

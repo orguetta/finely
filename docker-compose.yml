@@ -14,6 +14,23 @@ services:
     environment:
       - DJANGO_SETTINGS_MODULE=app.settings.dev
     depends_on:
+      - migrate
+      - db
+    networks:
+      - fintrack_network
+
+  migrate:
+    build:
+      context: ./api
+    working_dir: /app
+    entrypoint: ["sh", "./entrypoint.migrate.sh"]
+    volumes:
+      - ./api:/app
+    env_file:
+      - ./api/.env.dev
+    environment:
+      - DJANGO_SETTINGS_MODULE=app.settings.dev
+    depends_on:
       - db
     networks:
       - fintrack_network
