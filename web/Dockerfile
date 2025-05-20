@@ -17,7 +17,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build the application
-RUN pnpm run build
+RUN pnpm orval && pnpm run build
 
 # Stage 2: Serve
 FROM nginx:alpine
