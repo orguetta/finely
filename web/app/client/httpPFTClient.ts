@@ -2,10 +2,7 @@ import { getAuthToken, refreshAccessToken } from '@/lib/auth'
 import Axios, { type AxiosRequestConfig, AxiosError, InternalAxiosRequestConfig } from 'axios'
 import { toast } from 'sonner'
 
-export const PFT_BASE_URL =
-  import.meta.env.VITE_DEV_MODE === 'true'
-    ? import.meta.env.VITE_BASE_DOMAIN
-    : 'http://localhost:8000'
+export const PFT_BASE_URL = import.meta.env.VITE_BASE_DOMAIN || window.location.origin
 
 // Add retry property to AxiosRequestConfig
 interface CustomInternalAxiosRequestConfig extends InternalAxiosRequestConfig {
