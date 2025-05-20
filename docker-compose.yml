@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./api
+    command: sh -c "make run"
+    volumes:
+      - ./api:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./api/.env.dev
+    environment:
+      - DJANGO_SETTINGS_MODULE=app.settings.dev
+    depends_on:
+      - db
+    networks:
+      - fintrack_network
+
+  web:
+    build:
+      context: ./web
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - fintrack_network
+
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - ./api/.env.dev
+    networks:
+      - fintrack_network
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+
+networks:
+  fintrack_network:
+    driver: bridge
