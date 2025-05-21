@@ -4,6 +4,7 @@ services:
   api:
     build:
       context: ./api
+    image: ghcr.io/ashishkapoor/fintrack-api:latest
     command: sh -c "make run"
     volumes:
       - ./api:/app
@@ -22,6 +23,7 @@ services:
   migrate:
     build:
       context: ./api
+    image: ghcr.io/ashishkapoor/fintrack-migrate:latest
     working_dir: /app
     entrypoint: ["sh", "./entrypoint.migrate.sh"]
     volumes:
@@ -38,6 +40,7 @@ services:
   web:
     build:
       context: ./web
+    image: ghcr.io/ashishkapoor/fintrack-web:latest
     ports:
       - "5173:80"
     depends_on:
@@ -46,7 +49,7 @@ services:
       - fintrack_network
 
   db:
-    image: postgres:15
+    image: postgres:16-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
