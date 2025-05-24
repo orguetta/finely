@@ -11,7 +11,7 @@ password: fintrack
 
 ## Screenshot
 
-<img src="https://github.com/user-attachments/assets/67519e75-19b0-44f8-abe1-d5c57f8a710d" width="600" height="400" />
+<img src="https://github.com/user-attachments/assets/a9a4f39d-13fb-4ed3-a074-f3b73a47563d" alt="screenshot" width="800" height="600" />
 
 ---
 
