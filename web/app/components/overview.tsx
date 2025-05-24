@@ -12,6 +12,8 @@ import { EmptyPlaceholder } from '@/components/ui/empty-placeholder'
 import { CircleDollarSign } from 'lucide-react'
 import { useCurrency } from '@/context/currency-context'
 import { TypeEnum } from '@/client/gen/pft/typeEnum'
+import { useDateStore } from '@/hooks/use-date-store'
+import { formatDate } from 'date-fns'
 
 interface MonthlyData {
   name: string
@@ -31,7 +33,15 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function Overview() {
-  const { data: transactions } = useV1TransactionsList()
+  const { dateRange } = useDateStore()
+  const { from, to } = dateRange || {}
+  const { data: transactions } = useV1TransactionsList(
+    {
+      start_date: from ? formatDate(new Date(from), 'yyyy-MM-dd') : undefined,
+      end_date: to ? formatDate(new Date(to), 'yyyy-MM-dd') : undefined,
+    },
+    { swr: { revalidateOnMount: true } },
+  )
   const { currency } = useCurrency()
 
   if (!transactions?.results?.length) {

@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import { CurrencyDisplay } from '@/components/ui/currency-display'
 import { TypeEnum } from '@/client/gen/pft/typeEnum'
+import { DatePickerWithRange } from '@/components/date-range-picker'
 
 export default function DashboardPage() {
   const { isLoading: isLoadingCategories, data: categories } = useV1CategoriesList(
@@ -196,10 +197,13 @@ export default function DashboardPage() {
         </Card>
       </div>
       <Tabs defaultValue='overview' className='space-y-4'>
-        <TabsList>
-          <TabsTrigger value='overview'>Overview</TabsTrigger>
-          <TabsTrigger value='budgets'>Budgets</TabsTrigger>
-        </TabsList>
+        <div className='flex justify-between items-center'>
+          <TabsList>
+            <TabsTrigger value='overview'>Overview</TabsTrigger>
+            <TabsTrigger value='budgets'>Budgets</TabsTrigger>
+          </TabsList>
+          <DatePickerWithRange />
+        </div>
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid gap-4 md:grid-cols-8'>
             <Card className='md:col-span-4'>

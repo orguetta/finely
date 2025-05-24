@@ -56,9 +56,21 @@ class TransactionViewSet(viewsets.ModelViewSet):
     serializer_class = TransactionSerializer
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = CustomPagination
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
 
     def get_queryset(self):
-        return Transaction.objects.filter(user=self.request.user)
+        queryset = Transaction.objects.filter(user=self.request.user)
+        
+        # Date range filtering
+        start_date = self.request.query_params.get('start_date')
+        end_date = self.request.query_params.get('end_date')
+        
+        if start_date:
+            queryset = queryset.filter(transaction_date__gte=start_date)
+        if end_date:
+            queryset = queryset.filter(transaction_date__lte=end_date)
+            
+        return queryset
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
