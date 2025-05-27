@@ -19,6 +19,7 @@ services:
       - db
     networks:
       - fintrack_network
+    restart: always
 
   migrate:
     build:
@@ -47,6 +48,7 @@ services:
       - api
     networks:
       - fintrack_network
+    restart: always
 
   db:
     image: postgres:16-alpine
@@ -58,6 +60,7 @@ services:
       - fintrack_network
     ports:
       - "5432:5432"
+    restart: always 
 
 volumes:
   postgres_data:
