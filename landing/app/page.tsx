@@ -172,7 +172,7 @@ export default function LandingPage() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube-nocookie.com/embed/yE1KHYrWQKo?si=LoLHd-dE2rRmF8PY"
+                src="https://www.youtube-nocookie.com/embed/U6PLu4QR9xw?si=uEdOUB4oO8yWFqM3"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
