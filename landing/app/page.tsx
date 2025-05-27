@@ -224,8 +224,9 @@ export default function LandingPage() {
               <svg
                 width="900"
                 height="400"
+                viewBox="0 0 900 400"
                 xmlns="http://www.w3.org/2000/svg"
-                className="max-w-full h-auto"
+                className="w-full h-auto max-w-4xl"
               >
                 <style>
                   {`.circle {
@@ -241,6 +242,14 @@ export default function LandingPage() {
                   .label {
                     font-family: 'Segoe UI', sans-serif;
                     text-anchor: middle;
+                  }
+                  @media (max-width: 768px) {
+                    .arrow {
+                      stroke-width: 32;
+                    }
+                    .circle {
+                      stroke-width: 6;
+                    }
                   }`}
                 </style>
 
