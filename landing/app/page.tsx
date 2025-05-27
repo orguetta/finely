@@ -139,7 +139,7 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-4 text-sm text-gray-500">
-                No credit card required • Free 14-day trial • Cancel anytime
+                No credit card required • Try now for free!
               </div>
             </div>
             <div className="flex-1 w-full max-w-[600px]">
