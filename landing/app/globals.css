@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 @layer utilities {
@@ -14,13 +14,23 @@ body {
 
 @layer base {
   :root {
+    /* Finely brand colors */
+    --color-primary: 198 100% 38%;           /* #0284C7 */
+    --color-primary-foreground: 0 0% 98%;
+    --color-income: 122 55% 45%;             /* #22C55E */
+    --color-expense: 0 84% 60%;              /* #EF4444 */
+    --color-upcoming: 45 93% 47%;            /* #EAB308 */
+    --color-background-light: 0 0% 100%;     /* #FFFFFF */
+    --color-background-dark: 218 33% 12%;    /* #111827 */
+    
+    /* Background colors */
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --primary: 198 100% 38%;                 /* Match Finely primary color */
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -49,13 +59,23 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    /* Finely brand colors - same values for dark mode */
+    --color-primary: 198 100% 38%;           /* #0284C7 */
+    --color-primary-foreground: 0 0% 98%;
+    --color-income: 122 55% 45%;             /* #22C55E */
+    --color-expense: 0 84% 60%;              /* #EF4444 */
+    --color-upcoming: 45 93% 47%;            /* #EAB308 */
+    --color-background-light: 0 0% 100%;     /* #FFFFFF */
+    --color-background-dark: 218 33% 12%;    /* #111827 */
+    
+    /* Dark mode background */
+    --background: 220 13% 9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 220 13% 9%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 220 13% 9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 198 100% 38%;                 /* Match Finely primary color */
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;

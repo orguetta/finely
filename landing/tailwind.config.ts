@@ -11,7 +11,19 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
+  			// Finely brand colors
+  			primary: {
+  				DEFAULT: 'hsl(var(--color-primary))',
+  				foreground: 'hsl(var(--color-primary-foreground))'
+  			},
+  			income: 'hsl(var(--color-income))',
+  			expense: 'hsl(var(--color-expense))',
+  			upcoming: 'hsl(var(--color-upcoming))',
+  			background: {
+  				DEFAULT: 'hsl(var(--background))',
+  				light: 'hsl(var(--color-background-light))',
+  				dark: 'hsl(var(--color-background-dark))'
+  			},
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
@@ -20,10 +32,6 @@ const config: Config = {
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',

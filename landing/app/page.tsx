@@ -30,31 +30,31 @@ export default function LandingPage() {
           <nav className="hidden md:flex items-center gap-6">
             <Link
               href="#features"
-              className="text-sm font-medium hover:text-emerald-600 transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               Features
             </Link>
             <Link
               href="#how-it-works"
-              className="text-sm font-medium hover:text-emerald-600 transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               How It Works
             </Link>
             {/* <Link
               href="#testimonials"
-              className="text-sm font-medium hover:text-emerald-600 transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               Testimonials
             </Link> */}
             <Link
               href="#pricing"
-              className="text-sm font-medium hover:text-emerald-600 transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               Pricing
             </Link>
             <Link
               href="#faq"
-              className="text-sm font-medium hover:text-emerald-600 transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               FAQ
             </Link>
@@ -64,7 +64,7 @@ export default function LandingPage() {
               href="https://github.com/orguetta/finely"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="GitHub Repository"
             >
               <svg
@@ -93,15 +93,15 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-b from-white to-gray-50">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 space-y-4 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
                 Your Financial Success{" "}
-                <span className="text-emerald-600">Starts Here</span>
+                <span className="text-primary">Starts Here</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 max-w-[600px]">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-[600px]">
                 Finely helps you track expenses, manage budgets, and achieve
                 your financial goals with powerful insights and easy-to-use
                 tools.
@@ -138,14 +138,14 @@ export default function LandingPage() {
                 </a>
               </div>
 
-              <div className="pt-4 text-sm text-gray-500">
+              <div className="pt-4 text-sm text-muted-foreground">
                 No credit card required • Try now for free!
               </div>
             </div>
             <div className="flex-1 w-full max-w-[600px]">
               <div className="relative">
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-emerald-100 rounded-full blur-2xl opacity-80"></div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-100 rounded-full blur-2xl opacity-80"></div>
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl opacity-80"></div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl opacity-80"></div>
                 <div className="relative bg-white border rounded-2xl shadow-xl overflow-hidden">
                   <img
                     src="/Partnership-bro.svg?height=600&width=800"
@@ -159,7 +159,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-gray-100">
+      <section className="w-full py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
           <h2 className="text-3xl font-bold mb-6 text-center">
             Watch Finely in Action
@@ -186,10 +186,10 @@ export default function LandingPage() {
       </section>
 
       {/* Trusted By Section */}
-      {/* <section className="py-12 bg-gray-50 border-y">
+      {/* <section className="py-12 bg-muted/20 border-y">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-lg font-medium text-gray-600">
+            <h2 className="text-lg font-medium text-muted-foreground">
               Trusted by thousands of users worldwide
             </h2>
           </div>
@@ -201,7 +201,7 @@ export default function LandingPage() {
               "Company 4",
               "Company 5",
             ].map((company, index) => (
-              <div key={index} className="text-xl font-bold text-gray-400">
+              <div key={index} className="text-xl font-bold text-muted-foreground/50">
                 {company}
               </div>
             ))}
@@ -216,7 +216,7 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold mb-4">
               Powerful Features for Your Finances
             </h2>
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
               Everything you need to manage your money effectively in one place
             </p>
 
@@ -360,32 +360,32 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<CreditCard className="h-10 w-10 text-emerald-600" />}
+              icon={<CreditCard className="h-10 w-10 text-primary" />}
               title="Transaction Tracking"
               description="Easily log and categorize your income and expenses to keep track of where your money goes."
             />
             <FeatureCard
-              icon={<PieChart className="h-10 w-10 text-emerald-600" />}
+              icon={<PieChart className="h-10 w-10 text-primary" />}
               title="Budget Management"
               description="Set monthly budgets for different categories and get alerts when you're close to your limits."
             />
             <FeatureCard
-              icon={<BarChart3 className="h-10 w-10 text-emerald-600" />}
+              icon={<BarChart3 className="h-10 w-10 text-primary" />}
               title="Financial Reports"
               description="Visualize your spending patterns with intuitive charts and detailed financial reports."
             />
             <FeatureCard
-              icon={<LineChart className="h-10 w-10 text-emerald-600" />}
+              icon={<LineChart className="h-10 w-10 text-primary" />}
               title="Goal Tracking"
               description="Set financial goals and track your progress over time to stay motivated and focused."
             />
             <FeatureCard
-              icon={<Smartphone className="h-10 w-10 text-emerald-600" />}
+              icon={<Smartphone className="h-10 w-10 text-primary" />}
               title="Mobile Access"
               description="Access your financial data anytime, anywhere with our responsive web application."
             />
             <FeatureCard
-              icon={<Shield className="h-10 w-10 text-emerald-600" />}
+              icon={<Shield className="h-10 w-10 text-primary" />}
               title="Secure & Private"
               description="Your financial data is encrypted and secure. We never share your information with third parties."
             />
@@ -394,40 +394,40 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
+      <section id="how-it-works" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">How Finely Works</h2>
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
               Getting started is easy - be up and running in minutes
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">1</span>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-primary">1</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Create an Account</h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Sign up for free and set up your profile in just a few clicks.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">2</span>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-primary">2</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Track Your Finances</h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Log your transactions and categorize your spending habits.
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">3</span>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-primary">3</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Gain Insights</h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Get personalized reports and recommendations to improve your
                 finances.
               </p>
@@ -449,7 +449,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Our Users Say</h2>
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
               Thousands of people have transformed their financial lives with
               Finely
             </p>
@@ -479,13 +479,13 @@ export default function LandingPage() {
       </section> */}
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 md:py-24 bg-gray-50">
+      <section id="pricing" className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
               Choose the plan that works best for your financial needs
             </p>
           </div>
@@ -549,7 +549,7 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
+            <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
               Find answers to common questions about Finely
             </p>
           </div>
@@ -561,13 +561,13 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-emerald-50">
+      <section className="py-16 md:py-24 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Take Control of Your Finances?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Join thousands of users who have transformed their financial lives
               with Finely.
             </p>
@@ -592,7 +592,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 md:py-16 bg-gray-900 text-gray-300">
+      <footer className="py-12 md:py-16 bg-background-dark text-muted-foreground">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -604,7 +604,7 @@ export default function LandingPage() {
                 />
                 <span className="text-xl font-bold text-white">Finely</span>
               </div>
-              <p className="text-gray-400 mb-4">
+              <p className="text-muted-foreground/70 mb-4">
                 Your personal finance tracker for better money management and
                 financial freedom.
               </p>
@@ -769,7 +769,7 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          <div className="pt-8 mt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+          <div className="pt-8 mt-8 border-t border-muted text-center text-muted-foreground text-sm">
             <p>
               &copy; {new Date().getFullYear()} Finely by orbot. All rights
               reserved.

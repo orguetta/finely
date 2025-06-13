@@ -37,25 +37,25 @@ export function PricingCard({
       className={cn(
         "flex flex-col border-2 h-full",
         highlighted
-          ? "border-emerald-600 shadow-lg scale-105"
-          : "border-gray-200 shadow-md"
+          ? "border-primary shadow-lg scale-105"
+          : "border-border shadow-md"
       )}
     >
-      <CardHeader className={cn("pb-8", highlighted && "bg-emerald-50")}>
+      <CardHeader className={cn("pb-8", highlighted && "bg-primary/5")}>
         <div className="space-y-1">
           <h3 className="text-2xl font-bold">{title}</h3>
           <div className="flex items-baseline gap-1">
             <span className="text-3xl font-bold">{price}</span>
-            {period && <span className="text-gray-500">/{period}</span>}
+            {period && <span className="text-muted-foreground">/{period}</span>}
           </div>
-          <p className="text-sm text-gray-500 pt-2">{description}</p>
+          <p className="text-sm text-muted-foreground pt-2">{description}</p>
         </div>
       </CardHeader>
       <CardContent className="flex-1">
         <ul className="space-y-3">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center gap-2">
-              <Check className="h-5 w-5 text-emerald-600 flex-shrink-0" />
+              <Check className="h-5 w-5 text-primary flex-shrink-0" />
               <span>{feature}</span>
             </li>
           ))}
@@ -68,7 +68,7 @@ export function PricingCard({
             className={cn(
               "w-full",
               highlighted &&
-                "bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-600 hover:text-white"
+                "bg-primary hover:bg-primary/90 text-primary-foreground border-primary"
             )}
             disabled={disabled}
           >
