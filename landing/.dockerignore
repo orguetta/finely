@@ -1,0 +1,7 @@
+node_modules
+.next
+npm-debug.log
+README.md
+.npm
+.gitignore
+.DS_Store
