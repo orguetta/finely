@@ -1,6 +1,6 @@
 # 💰 Finely
 
-**Finely** is a privacy-first, self-hostable personal finance tracker built by [Sannty](https://sannty.in). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
+**Finely** is a privacy-first, self-hostable personal finance tracker built by [Or Guetta](https://or.guetta.tech). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
 
 ## [Self Host] Admin Credentials (change me!)
 URL: http://localhost:5173
@@ -199,7 +199,7 @@ Feel free to fork and submit a pull request.
 
 ## 📄 License
 
-MIT License © 2025 [Sannty](https://github.com/orguetta)
+MIT License © 2025 [Or Guetta](https://github.com/orguetta)
 
 ---
 
