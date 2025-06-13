@@ -1,12 +1,12 @@
-# 💰 Fintrack
+# 💰 Finely
 
-**Fintrack** is a privacy-first, self-hostable personal finance tracker built by [Sannty](https://sannty.in). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
+**Finely** is a privacy-first, self-hostable personal finance tracker built by [Sannty](https://sannty.in). Designed for individuals who want to take full control of their income, expenses, budgets, and financial goals without relying on third-party services.
 
 ## [Self Host] Admin Credentials (change me!)
 URL: http://localhost:5173
 ```
 email: admin@example.com
-password: fintrack
+password: finely
 ```
 
 ## Screenshot
@@ -54,7 +54,7 @@ password: fintrack
 ## 📁 Project Structure
 
 ```
-fintrack/
+Finely/
 ├── api/                # Django backend
 │   ├── app/            # Django project settings
 │   ├── pft/            # Main Django app
@@ -84,8 +84,8 @@ fintrack/
 
 ```bash
 # Clone the repository
-git clone https://github.com/ashishkapoor/fintrack.git
-cd fintrack
+git clone https://github.com/orguetta/finely.git
+cd finely
 
 # Copy environment files
 cp api/.env.example api/.env
@@ -104,8 +104,8 @@ The application will be available at:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ashishkapoor/fintrack.git
-cd fintrack
+git clone https://github.com/orguetta/finely.git
+cd finely
 ```
 
 2. Setup API (Backend):
@@ -152,7 +152,7 @@ pnpm dev
 # api/.env
 DEBUG=True
 SECRET_KEY=your_secure_secret_key
-DATABASE_URL=postgres://user:password@localhost:5432/fintrack
+DATABASE_URL=postgres://user:password@localhost:5432/Finely
 ALLOWED_HOSTS=localhost,127.0.0.1
 CORS_ALLOWED_ORIGINS=http://localhost:5173
 ```
@@ -199,16 +199,16 @@ Feel free to fork and submit a pull request.
 
 ## 📄 License
 
-MIT License © 2025 [Sannty](https://github.com/ashishkapoor)
+MIT License © 2025 [Sannty](https://github.com/orguetta)
 
 ---
 
 ## 💡 Inspiration
 
-FinTrack was built to give privacy-conscious users a simple but powerful way to manage their finances independently, free of subscription fees or vendor lock-in.
+Finely was built to give privacy-conscious users a simple but powerful way to manage their finances independently, free of subscription fees or vendor lock-in.
 
 ---
 
 ## 🙌 Support
 
-If you find FinTrack useful, consider giving a ⭐ on GitHub or sharing it with others!
+If you find Finely useful, consider giving a ⭐ on GitHub or sharing it with others!
