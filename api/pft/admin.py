@@ -115,6 +115,6 @@ admin.site.register(Budget)
 admin.site.register(Subscription)
 admin.site.register(SubscriptionPlan)
 
-admin.site.site_header = "FinTrack Admin"
-admin.site.site_title = "FinTrack Admin Portal"
-admin.site.index_title = "Welcome to FinTrack Financial Management Portal"
+admin.site.site_header = "Finely Admin"
+admin.site.site_title = "Finely Admin Portal"
+admin.site.index_title = "Welcome to Finely Financial Management Portal"

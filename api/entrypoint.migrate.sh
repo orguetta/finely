@@ -8,4 +8,4 @@ uv run manage.py migrate
 
 echo "👤 Creating superuser..."
 # Create superuser non-interactively
-echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser(email='admin@example.com', password='fintrack') if not User.objects.filter(email='admin@example.com').exists() else None" | uv run manage.py shell
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser(email='admin@example.com', password='finely') if not User.objects.filter(email='admin@example.com').exists() else None" | uv run manage.py shell
