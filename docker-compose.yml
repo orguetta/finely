@@ -1,15 +1,16 @@
-version: '3.8'
+name: 'finely'
 
 services:
   api:
     build:
       context: ./api
-    image: ghcr.io/ashishkapoor/fintrack-api:latest
+    image: ghcr.io/orguetta/finely-api:latest
+    container_name: finely_api
     command: sh -c "make run"
-    volumes:
-      - ./api:/app
     ports:
       - "8000:8000"
+    volumes:
+      - ./api:/app
     env_file:
       - ./api/.env.dev
     environment:
@@ -18,13 +19,14 @@ services:
       - migrate
       - db
     networks:
-      - fintrack_network
+      - internal
+      - proxy
     restart: always
 
   migrate:
     build:
       context: ./api
-    image: ghcr.io/ashishkapoor/fintrack-migrate:latest
+    image: ghcr.io/orguetta/finely-migrate:latest
     working_dir: /app
     entrypoint: ["sh", "./entrypoint.migrate.sh"]
     volumes:
@@ -36,20 +38,32 @@ services:
     depends_on:
       - db
     networks:
-      - fintrack_network
+      - internal
 
   web:
     build:
       context: ./web
-    image: ghcr.io/ashishkapoor/fintrack-web:latest
+    image: ghcr.io/orguetta/finely-web:latest
     ports:
       - "5173:80"
     depends_on:
       - api
     networks:
-      - fintrack_network
+      - internal
+      - proxy
     restart: always
 
+  landing:
+    build:
+      context: ./landing
+    image: ghcr.io/orguetta/finely-landing:latest
+    ports:
+      - "5174:3000"
+    depends_on:
+      - api
+    networks:
+      - proxy
+    restart: always
   db:
     image: postgres:16-alpine
     volumes:
@@ -57,14 +71,14 @@ services:
     env_file:
       - ./api/.env.dev
     networks:
-      - fintrack_network
-    ports:
-      - "5432:5432"
+      - internal
     restart: always 
 
 volumes:
   postgres_data:
 
 networks:
-  fintrack_network:
-    driver: bridge
+  internal:
+    internal: true
+  proxy:
+    external: true
