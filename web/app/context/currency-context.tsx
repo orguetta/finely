@@ -4,9 +4,10 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 
 // Currency options with symbols and flags
 export const currencies = [
-  { code: 'INR', symbol: '₹', flag: '🇮🇳', name: 'Indian Rupee' },
+  { code: 'ILS', symbol: '₪', flag: '🇮🇱', name: 'Israeli New Shekel' },
   { code: 'USD', symbol: '$', flag: '🇺🇸', name: 'US Dollar' },
   { code: 'EUR', symbol: '€', flag: '🇪🇺', name: 'Euro' },
+  { code: 'THB', symbol: '฿', flag: '🇹🇭', name: 'Thai Baht' },
   { code: 'GBP', symbol: '£', flag: '🇬🇧', name: 'British Pound' },
   { code: 'JPY', symbol: '¥', flag: '🇯🇵', name: 'Japanese Yen' },
   { code: 'CNY', symbol: '¥', flag: '🇨🇳', name: 'Chinese Yuan' },

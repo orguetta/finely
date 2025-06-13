@@ -29,7 +29,7 @@ export default function AuthenticationPage() {
                   alt="Logo"
                   className="h-8 w-auto mr-2"
                 />
-                FinTrack
+                Finely
               </div>
               <div className="mt-auto">
                 <blockquote className="space-y-2"></blockquote>

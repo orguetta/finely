@@ -27,7 +27,7 @@ export function Sidebar({ expanded, toggleSidebar, isMobile, isOpen, onOpenChang
               expanded || isMobile ? 'block' : 'hidden'
             }`}
           />
-          {(expanded || isMobile) && <span>FinTrack</span>}
+          {(expanded || isMobile) && <span>Finely</span>}
         </Link>
         {!isMobile && (
           <Button variant='ghost' size='icon' onClick={toggleSidebar} className='h-8 w-8'>
@@ -113,7 +113,7 @@ export function Sidebar({ expanded, toggleSidebar, isMobile, isOpen, onOpenChang
       <div className='mt-auto p-4 border-t'>
         {(expanded || isMobile) && (
           <div className='text-xs text-muted-foreground'>
-            <p>© 2025 FinTrack.</p>
+            <p>© 2025 Finely.</p>
             <p>All rights reserved</p>
           </div>
         )}

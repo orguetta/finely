@@ -1,5 +1,5 @@
 {
-  "name": "fintrack",
+  "name": "finely",
   "description": "A budget tracker app that helps you manage your finances and track your expenses.",
   "keywords": [
     "react",
@@ -8,7 +8,7 @@
     "ui",
     "template"
   ],
-  "author": "Ashish Kapoor",
+  "author": "Or Guetta",
   "private": true,
   "license": "MIT",
   "version": "0.0.1",

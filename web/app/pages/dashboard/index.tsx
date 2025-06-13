@@ -40,7 +40,7 @@ export default function DashboardPage() {
       <div className='p-6'>
         <EmptyPlaceholder
           icon={<CircleDollarSign className='w-12 h-12' />}
-          title='Welcome to FinTrack!'
+          title='Welcome to Finely!'
           description='Start by creating some categories to organize your transactions. This will help you track your income and expenses better.'
           action={
             <Link to='/categories'>
