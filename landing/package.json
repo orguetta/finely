@@ -1,5 +1,7 @@
 {
-  "name": "my-v0-project",
+  "name": "finely-landing",
+  "description": "Landing page for Finely, a modern finance app.",
+  "author": "orbot Team",
   "version": "0.1.0",
   "private": true,
   "scripts": {

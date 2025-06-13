@@ -62,7 +62,7 @@ export function PricingCard({
         </ul>
       </CardContent>
       <CardFooter className="pt-4">
-        <Link href="https://fintrack.sannty.in/register" className="w-full">
+        <Link href="https://finely-app.orbot.co/register" className="w-full">
           <Button
             variant={buttonVariant}
             className={cn(

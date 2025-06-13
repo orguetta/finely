@@ -27,6 +27,7 @@ services:
     build:
       context: ./api
     image: ghcr.io/orguetta/finely-migrate:latest
+    container_name: finely_migrate
     working_dir: /app
     entrypoint: ["sh", "./entrypoint.migrate.sh"]
     volumes:
@@ -44,6 +45,7 @@ services:
     build:
       context: ./web
     image: ghcr.io/orguetta/finely-web:latest
+    container_name: finely_web
     ports:
       - "5173:80"
     depends_on:
@@ -57,6 +59,7 @@ services:
     build:
       context: ./landing
     image: ghcr.io/orguetta/finely-landing:latest
+    container_name: finely_landing
     ports:
       - "5174:3000"
     depends_on:
@@ -66,6 +69,7 @@ services:
     restart: always
   db:
     image: postgres:16-alpine
+    container_name: finely_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:

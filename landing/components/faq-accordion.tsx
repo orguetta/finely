@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "Is there a mobile app available?",
     answer:
-      "Currently, FinTrack is a responsive web application that works great on mobile devices. We're working on native mobile apps for iOS and Android that will be released soon.",
+      "Currently, Finely is a responsive web application that works great on mobile devices. We're working on native mobile apps for iOS and Android that will be released soon.",
   },
   {
     question: "Can I cancel my subscription anytime?",
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How do I get started?",
     answer:
-      "Getting started is easy! Just sign up for a free account, set up your profile, and you can start tracking your finances right away. We also offer guided onboarding to help you get the most out of FinTrack.",
+      "Getting started is easy! Just sign up for a free account, set up your profile, and you can start tracking your finances right away. We also offer guided onboarding to help you get the most out of Finely.",
   },
   {
     question: "Do you offer customer support?",
